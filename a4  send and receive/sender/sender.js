@@ -3,7 +3,11 @@ const { Kafka, logLevel } = require("kafkajs");
 
 console.log('Kafka broker', process.env.KAFKA_BROKER_ADDRESS);
 
-const kafka = new Kafka({brokers: [process.env.KAFKA_BROKER_ADDRESS], logLevel: logLevel.ERROR})
+const brokersList = process.env.KAFKA_BROKER_ADDRESS.split(',');
+
+console.log(brokersList);
+
+const kafka = new Kafka({brokers: brokersList, logLevel: logLevel.ERROR})
 const producer = kafka.producer();
 
 
