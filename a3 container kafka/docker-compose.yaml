@@ -39,28 +39,28 @@ services:
     - ./data/kafka-3/:/tmp/kafka-logs/
     networks:
     - kafka
-  kafka-producer:
-    container_name: kafka-producer
-    image: aimvector/kafka:3.6.0
-    build: 
-      context: .
-    working_dir: /kafka
-    entrypoint: /bin/bash
-    stdin_open: true
-    tty: true
-    networks:
-    - kafka
-  kafka-consumer:
-    container_name: kafka-consumer
-    image: aimvector/kafka:3.6.0
-    build: 
-      context: .
-    working_dir: /kafka
-    entrypoint: /bin/bash
-    stdin_open: true
-    tty: true
-    networks:
-    - kafka
+  # kafka-producer:
+  #   container_name: kafka-producer
+  #   image: aimvector/kafka:3.6.0
+  #   build: 
+  #     context: .
+  #   working_dir: /kafka
+  #   entrypoint: /bin/bash
+  #   stdin_open: true
+  #   tty: true
+  #   networks:
+  #   - kafka
+  # kafka-consumer:
+  #   container_name: kafka-consumer
+  #   image: aimvector/kafka:3.6.0
+  #   build: 
+  #     context: .
+  #   working_dir: /kafka
+  #   entrypoint: /bin/bash
+  #   stdin_open: true
+  #   tty: true
+  #   networks:
+  #   - kafka
 networks: 
   kafka:
     external: true
