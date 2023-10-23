@@ -7,6 +7,7 @@ services:
       context: ./zookeeper
     volumes:
     - ./config/zookeeper-1/zookeeper.properties:/kafka/config/zookeeper.properties
+    - ./data/zookeeper-1/:/tmp/zookeeper
     networks:
     - kafka
   kafka-1:
