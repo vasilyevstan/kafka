@@ -1,0 +1,20 @@
+{
+  "name": "receiver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "receiver.js",
+  "scripts": {
+    "dev": "nodemon receiver",
+    "start": "node receiver"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "kafkajs": "^2.2.4"
+  }
+}

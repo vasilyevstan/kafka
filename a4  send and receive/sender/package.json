@@ -1,0 +1,18 @@
+{
+  "name": "sender",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sender.js",
+  "scripts": {
+    "dev": "nodemon sender",
+    "start": "node sender"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "kafkajs": "^2.2.4",
+    "nodemon": "^3.0.1"
+  }
+}

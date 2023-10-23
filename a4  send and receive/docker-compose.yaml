@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  node-sender-1:
+    container_name: node-sender
+    image: node_sender:1.1
+    build:
+      context: ./sender
+    networks:
+    - kafka
+  node-receiver-1:
+    container_name: node-receiver
+    image: node_receiver:1.1
+    build: 
+      context: ./receiver
+    networks:
+    - kafka
+networks: 
+  kafka:
+    external: true
+    name: kafka
